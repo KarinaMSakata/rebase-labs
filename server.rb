@@ -15,10 +15,6 @@ get '/tests' do
   end.to_json
 end
 
-get '/hello' do
-  'Hello world!'
-end
-
 Rack::Handler::Puma.run(
   Sinatra::Application,
   Port: 3000,
