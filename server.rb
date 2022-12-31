@@ -15,6 +15,11 @@ get '/tests' do
   end.to_json
 end
 
+get '/exame' do
+  File.read('./public/index.html')
+
+end
+
 Rack::Handler::Puma.run(
   Sinatra::Application,
   Port: 3000,

@@ -3,7 +3,8 @@
 
 Uma app web para listagem de exames médicos.
 
-Projeto realizado oir Rebase e Campus Code.
+Projeto realizado em conjunto de Rebase e Campus Code.
+
 
 ## Tech Stack
 
