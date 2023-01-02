@@ -17,7 +17,10 @@ end
 
 get '/exame' do
   File.read('./public/index.html')
+end
 
+get '/datas' do
+  QueryCsv.all.to_json
 end
 
 Rack::Handler::Puma.run(
