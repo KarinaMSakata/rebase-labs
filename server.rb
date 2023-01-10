@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'rack/handler/puma'
 require 'csv'
+require_relative 'query_csv'
 
 get '/tests' do
   rows = CSV.read("./data.csv", col_sep: ';')
@@ -20,7 +21,7 @@ get '/exame' do
 end
 
 get '/datas' do
-  QueryCsv.all.to_json
+  QueryCsv.new.all
 end
 
 Rack::Handler::Puma.run(

@@ -10,6 +10,7 @@ services:
       - gemconfig:/root/.local/share/gem
     ports:
       - "3000:3000"
+    command: "bundle && ruby server.rb"
 
 volumes:
   rubygems:
