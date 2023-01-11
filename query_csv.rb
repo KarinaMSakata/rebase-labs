@@ -64,7 +64,7 @@ class QueryCsv
   end
 
   def all
-    exams = conn.exec('SELECT * FROM EXAMS')
+    exams = conn.exec('SELECT * FROM EXAMS LIMIT 10')
     exams.map { |exam| exam}.to_json
   end
     
